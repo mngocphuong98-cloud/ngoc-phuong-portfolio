@@ -1,124 +1,152 @@
 <!doctype html>
 <html lang="vi">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Portfolio của Ngọc Phương — Production Accountant, SAP Costing & Process Improvement." />
-  <title>Ngọc Phương — Production Accountant & SAP Process Improvement</title>
-  <style>
-    :root{
-      --bg:#f6f3ed; --surface:#fffdf9; --text:#1d2a27; --muted:#68736f;
-      --line:#d9ded8; --accent:#2f665a; --accent-2:#dbe9e4; --dark:#18362f;
-      --shadow:0 16px 50px rgba(24,54,47,.08); --radius:22px; --max:1160px;
-    }
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}
-    a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
-    .nav{position:sticky;top:0;z-index:20;background:rgba(246,243,237,.88);backdrop-filter:blur(12px);border-bottom:1px solid rgba(217,222,216,.8)}
-    .nav-inner{height:70px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-weight:800;letter-spacing:.08em;font-size:.9rem}.nav-links{display:flex;gap:24px;font-size:.92rem;color:var(--muted)}.nav-links a:hover{color:var(--accent)}
-    .hero{padding:86px 0 60px}.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--accent)}.eyebrow:before{content:"";width:32px;height:1px;background:var(--accent)}
-    h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.08;margin:0}.hero h1{font-size:clamp(3.2rem,8vw,7.2rem);letter-spacing:-.055em;max-width:1050px;margin-top:18px}.hero h1 span{color:var(--accent)}
-    .hero-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:56px;margin-top:38px;align-items:end}.lead{font-size:1.2rem;max-width:720px;color:#344541}.mini-card{background:var(--dark);color:#f7f4ee;border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}.mini-card strong{font-size:2.1rem;font-family:Georgia,"Times New Roman",serif}.mini-card p{margin:.4rem 0 0;color:#cfe0da;font-size:.92rem}
-    .chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:28px}.chip{border:1px solid var(--line);background:rgba(255,255,255,.5);padding:8px 12px;border-radius:999px;font-size:.82rem;color:#45534f}
-    section{padding:80px 0;border-top:1px solid var(--line)}.section-head{display:grid;grid-template-columns:.55fr 1.45fr;gap:42px;margin-bottom:42px}.section-kicker{font-size:.78rem;text-transform:uppercase;letter-spacing:.16em;font-weight:800;color:var(--accent)}.section-head h2{font-size:clamp(2.2rem,5vw,4.3rem);letter-spacing:-.04em}.section-head p{max-width:720px;color:var(--muted);font-size:1.02rem;margin:12px 0 0}
-    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow)}.panel h3{font-size:1.55rem;margin-bottom:12px}.panel p{color:var(--muted);margin:0}.principles{display:grid;gap:15px;margin-top:20px}.principle{display:grid;grid-template-columns:42px 1fr;gap:14px;align-items:start}.num{width:36px;height:36px;border-radius:50%;background:var(--accent-2);display:grid;place-items:center;color:var(--accent);font-weight:800;font-size:.8rem}
-    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}.project{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px;transition:.25s ease;position:relative;overflow:hidden}.project:hover{transform:translateY(-4px);box-shadow:var(--shadow)}.project-top{display:flex;justify-content:space-between;gap:20px;align-items:start}.project-id{font-size:.76rem;letter-spacing:.12em;color:var(--accent);font-weight:800}.project h3{font-size:1.75rem;margin:10px 0 12px}.project p{color:var(--muted);margin:0 0 18px}.tags{display:flex;flex-wrap:wrap;gap:8px}.tag{background:var(--accent-2);color:var(--dark);padding:6px 10px;border-radius:999px;font-size:.76rem;font-weight:700}.toggle{border:0;background:none;color:var(--accent);font-weight:800;padding:12px 0 0;cursor:pointer}.details{display:none;margin-top:18px;padding-top:18px;border-top:1px solid var(--line)}.details.open{display:block}.details dl{display:grid;grid-template-columns:120px 1fr;gap:8px 14px;margin:0}.details dt{font-weight:800;font-size:.82rem}.details dd{margin:0;color:var(--muted)}
-    .knowledge-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.knowledge{padding:24px;border-left:3px solid var(--accent);background:rgba(255,253,249,.55)}.knowledge h3{font-family:inherit;font-size:1rem;margin-bottom:9px}.knowledge p{margin:0;color:var(--muted);font-size:.91rem}
-    .skill-groups{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.skill{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px}.skill h3{font-family:inherit;font-size:.95rem;margin-bottom:12px}.skill ul{list-style:none;padding:0;margin:0;color:var(--muted);font-size:.9rem}.skill li+li{margin-top:6px}
-    .closing{background:var(--dark);color:#f8f5ef;border-radius:32px;padding:52px;display:grid;grid-template-columns:1.2fr .8fr;gap:48px}.closing h2{font-size:clamp(2.3rem,5vw,4.7rem);letter-spacing:-.04em}.closing p{color:#ccddd7;max-width:670px}.closing-note{align-self:end;border-left:1px solid rgba(255,255,255,.25);padding-left:28px;color:#d9e5e1}.closing-note strong{display:block;color:white;margin-bottom:8px}
-    footer{padding:34px 0 50px;color:var(--muted);font-size:.84rem}.footer-row{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
-    @media(max-width:850px){.nav-links{display:none}.hero-grid,.section-head,.about-grid,.projects,.closing{grid-template-columns:1fr}.knowledge-grid{grid-template-columns:1fr 1fr}.skill-groups{grid-template-columns:1fr 1fr}.hero{padding-top:58px}.hero h1{font-size:clamp(3rem,16vw,5rem)}.closing-note{border-left:0;border-top:1px solid rgba(255,255,255,.25);padding:24px 0 0}.details dl{grid-template-columns:1fr}}
-    @media(max-width:560px){.wrap{width:min(var(--max),calc(100% - 24px))}.knowledge-grid,.skill-groups{grid-template-columns:1fr}.panel,.project{padding:22px}.closing{padding:30px;border-radius:24px}.hero{padding-bottom:40px}section{padding:58px 0}}
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="description" content="Ngọc Phương — Production Accounting, SAP, Costing, Data Control & Process Improvement.">
+  <meta name="theme-color" content="#0f2d29">
+  <meta property="og:title" content="Ngọc Phương — Production Accounting & SAP Process Improvement">
+  <meta property="og:description" content="Work & Knowledge Portfolio: Production Costing, SAP, Data Control and Accounting Automation.">
+  <meta property="og:type" content="website">
+  <title>Ngọc Phương — Production Accounting & SAP Process Improvement</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
 </head>
 <body>
+  <a class="skip" href="#main" data-i18n="skip">Bỏ qua điều hướng</a>
+
   <header class="nav">
     <div class="wrap nav-inner">
-      <a class="brand" href="#top">NGỌC PHƯƠNG</a>
-      <nav class="nav-links" aria-label="Điều hướng chính">
-        <a href="#about">Giới thiệu</a><a href="#projects">Dự án</a><a href="#knowledge">Knowledge</a><a href="#skills">Kỹ năng</a>
-      </nav>
+      <a href="#top" class="brand" aria-label="Ngọc Phương portfolio"><span class="brand-mark">NP</span><span>NGỌC PHƯƠNG</span></a>
+      <div class="nav-right">
+        <nav class="nav-links" aria-label="Primary">
+          <a href="#about" data-i18n="navAbout">Giới thiệu</a>
+          <a href="#projects" data-i18n="navProjects">Dự án</a>
+          <a href="#knowledge" data-i18n="navKnowledge">SAP Knowledge</a>
+          <a href="#skills" data-i18n="navSkills">Kỹ năng</a>
+        </nav>
+        <div class="lang" aria-label="Language"><button type="button" data-lang="vi">VI</button><button type="button" data-lang="en">EN</button></div>
+        <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
     </div>
   </header>
 
-  <main id="top">
-    <section class="hero" style="border-top:0">
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
+    <a href="#about" data-i18n="navAbout">Giới thiệu</a>
+    <a href="#projects" data-i18n="navProjects">Dự án</a>
+    <a href="#knowledge" data-i18n="navKnowledge">SAP Knowledge</a>
+    <a href="#skills" data-i18n="navSkills">Kỹ năng</a>
+  </nav>
+
+  <main id="main">
+    <section class="hero" id="top">
       <div class="wrap">
-        <div class="eyebrow">Work & Knowledge Portfolio</div>
-        <h1>Production Accountant<br><span>& SAP Process Improvement</span></h1>
-        <div class="hero-grid">
+        <div class="hero-top">
           <div>
-            <p class="lead">Tôi tập trung vào kế toán sản xuất, SAP, kiểm soát dữ liệu và cải tiến quy trình — biến những bước đối chiếu thủ công thành cách làm rõ ràng, có thể kiểm tra và có thể tự động hóa.</p>
-            <div class="chips">
-              <span class="chip">SAP FI / CO / MM / AA</span><span class="chip">Production Costing</span><span class="chip">Inventory Control</span><span class="chip">Excel & Google Sheets</span><span class="chip">Process Improvement</span><span class="chip">Automation</span>
+            <div class="eyebrow" data-i18n="heroEyebrow">Work & Knowledge Portfolio</div>
+            <h1 data-i18n-html="heroTitle">Production Accounting<br><em>SAP & Process Improvement</em></h1>
+            <p class="hero-copy" data-i18n="heroCopy">Tôi kết hợp nghiệp vụ kế toán sản xuất, tư duy kiểm soát dữ liệu và SAP để truy nguyên sai lệch, chuẩn hóa quy trình và biến các bước kiểm tra thủ công thành cách làm có thể lặp lại.</p>
+            <div class="hero-actions">
+              <a class="btn primary" href="#projects" data-i18n="seeProjects">Xem dự án</a>
+              <a class="btn" href="#knowledge" data-i18n="exploreKb">Khám phá SAP Knowledge Base</a>
             </div>
           </div>
-          <aside class="mini-card"><strong>06+</strong><p>case study thực tế được hệ thống hóa từ công việc kế toán, SAP và kiểm soát vận hành.</p></aside>
+          <aside class="hero-card reveal">
+            <div class="small" data-i18n="focusLabel">Professional focus</div>
+            <strong data-i18n-html="focusTitle">Accounting clarity<br>through systems thinking.</strong>
+            <p data-i18n="focusCopy">Hiểu số liệu từ nguồn phát sinh, kiểm tra logic nghiệp vụ và xây control có thể tái sử dụng.</p>
+          </aside>
+        </div>
+        <div class="hero-meta reveal">
+          <div class="meta"><strong>FI · CO · MM · AA</strong><span data-i18n="meta1">Phạm vi SAP thực hành</span></div>
+          <div class="meta"><strong>Costing · WIP · ML</strong><span data-i18n="meta2">Trọng tâm closing sản xuất</span></div>
+          <div class="meta"><strong>Excel · Sheets · Automation</strong><span data-i18n="meta3">Bộ công cụ kiểm soát dữ liệu</span></div>
         </div>
       </div>
     </section>
 
     <section id="about">
       <div class="wrap">
-        <div class="section-head"><div class="section-kicker">01 / About</div><div><h2>Không chỉ làm đúng nghiệp vụ.<br>Tôi muốn hiểu vì sao số liệu lệch.</h2><p>Portfolio này ghi lại cách tôi tiếp cận vấn đề trong kế toán sản xuất: xác định nguồn dữ liệu, đối chiếu logic nghiệp vụ, tìm điểm sai lệch trên SAP và xây công cụ để việc kiểm soát lần sau nhanh hơn.</p></div></div>
-        <div class="about-grid">
-          <div class="panel"><h3>Định hướng chuyên môn</h3><p>Phát triển từ vai trò kế toán sản xuất sang hướng <strong>Accounting Process & Data Improvement</strong>: hiểu nghiệp vụ đủ sâu để phát hiện rủi ro, đồng thời biết dùng dữ liệu và automation để giảm thao tác lặp lại.</p></div>
-          <div class="panel"><h3>Cách tôi giải quyết vấn đề</h3><div class="principles">
-            <div class="principle"><div class="num">01</div><div><strong>Trace the source</strong><br><span style="color:var(--muted)">Xác định giao dịch, kỳ, lệnh, PO/SO hoặc chứng từ tạo ra số liệu.</span></div></div>
-            <div class="principle"><div class="num">02</div><div><strong>Reconcile the logic</strong><br><span style="color:var(--muted)">Đối chiếu SAP với dữ liệu vận hành, BOM, hóa đơn hoặc sổ chi tiết.</span></div></div>
-            <div class="principle"><div class="num">03</div><div><strong>Build a repeatable control</strong><br><span style="color:var(--muted)">Biến cách kiểm tra thành checklist, file kiểm soát hoặc quy trình tự động.</span></div></div>
+        <div class="section-head reveal">
+          <div class="section-kicker" data-i18n="aboutKicker">01 / Profile</div>
+          <div>
+            <h2 data-i18n-html="aboutTitle">Không chỉ làm đúng nghiệp vụ.<br>Tôi muốn hiểu vì sao số liệu lệch.</h2>
+            <p data-i18n="aboutCopy">Portfolio này ghi lại cách tôi tiếp cận các vấn đề kế toán sản xuất: xác định nguồn dữ liệu, đối chiếu logic SAP với vận hành, tìm nguyên nhân gốc và chuẩn hóa thành checklist hoặc công cụ kiểm soát.</p>
           </div>
         </div>
-      </div>
-    </section>
-
-    <section id="projects">
-      <div class="wrap">
-        <div class="section-head"><div class="section-kicker">02 / Selected Projects</div><div><h2>Case studies từ vấn đề thật.</h2><p>Các case được trình bày theo 4 phần: vấn đề → dữ liệu → cách xử lý → giá trị mang lại. Tên doanh nghiệp, giá trị tiền và dữ liệu nội bộ đã được lược bỏ.</p></div></div>
-        <div class="projects">
-          <article class="project"><div class="project-top"><span class="project-id">CASE 01</span><span>↗</span></div><h3>Production Material Consumption Control</h3><p>Kiểm soát tiêu hao NVL/BTP theo lệnh sản xuất, so sánh thực tế với BOM và nhận diện các lệnh có mức lệch bất thường.</p><div class="tags"><span class="tag">BOM</span><span class="tag">MB51</span><span class="tag">Google Sheets</span><span class="tag">Apps Script</span></div><button class="toggle">Xem chi tiết</button><div class="details"><dl><dt>Vấn đề</dt><dd>Khó rà thủ công số lượng lớn lệnh sản xuất và phát hiện tiêu hao sai hoặc lệch định mức.</dd><dt>Dữ liệu</dt><dd>Dữ liệu lệnh SX, BOM, material master và movement thực tế.</dd><dt>Giải pháp</dt><dd>Mapping nhiều nguồn, tính kg thực tế/BOM, tỷ lệ phế, nhận diện WC và cảnh báo các trường hợp vượt ngưỡng.</dd><dt>Giá trị</dt><dd>Chuyển từ kiểm tra toàn bộ sang tập trung vào ngoại lệ cần điều tra.</dd></dl></div></article>
-          <article class="project"><div class="project-top"><span class="project-id">CASE 02</span><span>↗</span></div><h3>GR/IR & PO Invoice Control</h3><p>Tự động hóa kiểm tra các PO đã nhận hàng nhưng chưa nhận hóa đơn, đồng thời mapping nhà cung cấp và tên vật tư.</p><div class="tags"><span class="tag">MB5S</span><span class="tag">PO</span><span class="tag">AP</span><span class="tag">Reconciliation</span></div><button class="toggle">Xem chi tiết</button><div class="details"><dl><dt>Vấn đề</dt><dd>Dữ liệu GR/IR nhiều dòng, khó nhìn nhanh PO/NCC nào còn treo và giá trị còn lại.</dd><dt>Dữ liệu</dt><dd>MB5S, vendor master, material master.</dd><dt>Giải pháp</dt><dd>Gom dữ liệu theo PO/NCC, mapping mô tả vật tư và tính chênh giữa goods receipt với invoice.</dd><dt>Giá trị</dt><dd>Tạo danh sách follow-up rõ ràng cho các khoản còn treo cuối kỳ.</dd></dl></div></article>
-          <article class="project"><div class="project-top"><span class="project-id">CASE 03</span><span>↗</span></div><h3>Monthly Production Cost Closing</h3><p>Kiểm soát luồng closing giá thành: activity allocation, WIP, Material Ledger, settlement và đối chiếu tài khoản sản xuất.</p><div class="tags"><span class="tag">KSII</span><span class="tag">WIP</span><span class="tag">CKMLCP</span><span class="tag">Settlement</span></div><button class="toggle">Xem chi tiết</button><div class="details"><dl><dt>Vấn đề</dt><dd>Sai kỳ, lệnh chưa hoàn tất hoặc mapping tài khoản có thể tạo chênh lệch lớn sau kết chuyển.</dd><dt>Cách làm</dt><dd>Kiểm tra trạng thái lệnh, actual cost, WIP, kỳ hạch toán và mapping trước/sau từng bước closing.</dd><dt>Điểm học được</dt><dd>Không xử lý chênh lệch chỉ bằng bút toán cuối; phải truy ngược về nguồn phát sinh và thứ tự chạy.</dd></dl></div></article>
-          <article class="project"><div class="project-top"><span class="project-id">CASE 04</span><span>↗</span></div><h3>Export Cost Tracking by Sales Order</h3><p>Tập hợp chi phí xuất khẩu theo Sales Order, khách hàng, nhà cung cấp và hóa đơn đầu vào để phục vụ báo cáo.</p><div class="tags"><span class="tag">SO Mapping</span><span class="tag">GL</span><span class="tag">Customer</span><span class="tag">Excel</span></div><button class="toggle">Xem chi tiết</button><div class="details"><dl><dt>Vấn đề</dt><dd>Chi phí nằm ở nhiều tài khoản và nguồn chứng từ, khó nhìn tổng thể theo từng đơn hàng xuất khẩu.</dd><dt>Giải pháp</dt><dd>Chuẩn hóa mapping SO ↔ khách hàng ↔ NCC ↔ hóa đơn ↔ loại chi phí.</dd><dt>Giá trị</dt><dd>Tạo báo cáo có thể truy vết từ tổng chi phí xuống chứng từ nguồn.</dd></dl></div></article>
-          <article class="project"><div class="project-top"><span class="project-id">CASE 05</span><span>↗</span></div><h3>Fixed Asset Reconciliation</h3><p>Đối chiếu danh mục tài sản trên SAP với danh sách kiểm kê thực tế và nhận diện mã ngoài hệ thống.</p><div class="tags"><span class="tag">Fixed Assets</span><span class="tag">SAP AA</span><span class="tag">Inventory</span><span class="tag">Matching</span></div><button class="toggle">Xem chi tiết</button><div class="details"><dl><dt>Vấn đề</dt><dd>Tên tài sản không đồng nhất giữa hệ thống và thực tế, có mã không còn giá trị hoặc nằm ngoài SAP.</dd><dt>Giải pháp</dt><dd>Chuẩn hóa tên, đối chiếu mã/giá trị/cost center và fuzzy matching cho các tên gần giống.</dd><dt>Giá trị</dt><dd>Giảm thời gian rà soát thủ công và tách rõ nhóm cần xử lý tiếp.</dd></dl></div></article>
-          <article class="project"><div class="project-top"><span class="project-id">CASE 06</span><span>↗</span></div><h3>Import Tax Accounting Workflow</h3><p>Hệ thống hóa quy trình ghi nhận thuế nhập khẩu, VAT nhập khẩu và đối chiếu với PO/nguyên vật liệu.</p><div class="tags"><span class="tag">Import</span><span class="tag">MIRO</span><span class="tag">Tax</span><span class="tag">SOP</span></div><button class="toggle">Xem chi tiết</button><div class="details"><dl><dt>Vấn đề</dt><dd>Thuế từ tờ khai không luôn đi theo PO như hóa đơn mua hàng thông thường.</dd><dt>Giải pháp</dt><dd>Tách rõ bước ghi nhận hàng, thuế NK, VAT NK, thanh toán và cấn trừ với giá trị hàng.</dd><dt>Giá trị</dt><dd>Biến nghiệp vụ ít phát sinh thành checklist có thể tái sử dụng, giảm phụ thuộc vào trí nhớ thao tác.</dd></dl></div></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="knowledge">
-      <div class="wrap">
-        <div class="section-head"><div class="section-kicker">03 / Knowledge Base</div><div><h2>Những gì tôi đang hệ thống hóa.</h2><p>Phần knowledge base sẽ phát triển dần thành thư viện ghi chú thực hành: mỗi bài tập trung vào một tình huống, logic kiểm tra và những lỗi cần tránh.</p></div></div>
-        <div class="knowledge-grid">
-          <div class="knowledge"><h3>Monthly Closing & Costing</h3><p>Activity allocation, WIP, Material Ledger, settlement, đối chiếu 154/632 và kiểm tra lệnh lệch kỳ.</p></div>
-          <div class="knowledge"><h3>PR / PO / GR-IR</h3><p>Checklist PR, PO dịch vụ, hàng đã nhận chưa hóa đơn, xử lý sai lệch GR/IR.</p></div>
-          <div class="knowledge"><h3>Fixed Assets</h3><p>Tăng/giảm tài sản, điều chuyển, kiểm kê, nguyên giá và chuyển nhóm chi phí trả trước.</p></div>
-          <div class="knowledge"><h3>Import Accounting</h3><p>MIRO, thuế nhập khẩu, VAT nhập khẩu, clearing và logic tỷ giá.</p></div>
-          <div class="knowledge"><h3>SAP Troubleshooting</h3><p>Cách đọc lỗi theo kỳ, valuation, account mapping, trạng thái lệnh và quyền truy cập.</p></div>
-          <div class="knowledge"><h3>Accounting Automation</h3><p>Thiết kế file kiểm soát, mapping dữ liệu, conditional checks và giảm thao tác lặp lại.</p></div>
+        <div class="grid-2">
+          <article class="panel reveal"><h3 data-i18n="directionTitle">Định hướng chuyên môn</h3><p data-i18n-html="directionCopy">Phát triển theo hướng <strong>Production Accounting → SAP Key User → Accounting Process & Data Improvement</strong>.</p></article>
+          <article class="panel reveal">
+            <h3 data-i18n="methodTitle">Cách tôi giải quyết vấn đề</h3>
+            <div class="principles">
+              <div class="principle"><div class="num">01</div><div><b>Trace the source</b><span data-i18n="p1">Xác định chứng từ, kỳ, lệnh, PO/SO hoặc giao dịch tạo ra số liệu.</span></div></div>
+              <div class="principle"><div class="num">02</div><div><b>Reconcile the logic</b><span data-i18n="p2">Đối chiếu SAP với BOM, dữ liệu vận hành, hóa đơn và sổ chi tiết.</span></div></div>
+              <div class="principle"><div class="num">03</div><div><b>Build a repeatable control</b><span data-i18n="p3">Chuyển cách kiểm tra thành checklist, file control hoặc automation.</span></div></div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
     <section id="skills">
       <div class="wrap">
-        <div class="section-head"><div class="section-kicker">04 / Toolkit</div><div><h2>Business knowledge + system thinking.</h2></div></div>
-        <div class="skill-groups">
-          <div class="skill"><h3>SAP</h3><ul><li>FI / CO / MM / AA</li><li>Production Orders</li><li>Material Ledger</li><li>Cost Center & Settlement</li></ul></div>
-          <div class="skill"><h3>Accounting</h3><ul><li>Production Costing</li><li>AP & GR/IR</li><li>Fixed Assets</li><li>Inventory & Import Tax</li></ul></div>
-          <div class="skill"><h3>Data</h3><ul><li>Excel</li><li>Google Sheets</li><li>Apps Script</li><li>Data Mapping & Reconciliation</li></ul></div>
-          <div class="skill"><h3>Working Style</h3><ul><li>Root-cause analysis</li><li>Checklist & SOP</li><li>Exception-based control</li><li>Continuous improvement</li></ul></div>
+        <div class="section-head reveal"><div class="section-kicker" data-i18n="expertiseKicker">02 / Expertise</div><div><h2 data-i18n="expertiseTitle">Business knowledge + system thinking.</h2><p data-i18n="expertiseCopy">Các nhóm năng lực chính được xây từ công việc thực tế, không chỉ từ danh sách transaction code.</p></div></div>
+        <div class="expertise">
+          <article class="expert reveal"><div class="icon">01</div><h3 data-i18n="exp1Title">Production Costing</h3><p data-i18n="exp1Copy">Lệnh sản xuất, actual cost, activity allocation, WIP, settlement và Material Ledger.</p></article>
+          <article class="expert reveal"><div class="icon">02</div><h3 data-i18n="exp2Title">AP & Procurement Control</h3><p data-i18n="exp2Copy">PR/PO, GR/IR, service PO, invoice reconciliation và kiểm soát khoản treo cuối kỳ.</p></article>
+          <article class="expert reveal"><div class="icon">03</div><h3 data-i18n="exp3Title">Fixed Assets & Inventory</h3><p data-i18n="exp3Copy">Tăng/giảm tài sản, khấu hao, kiểm kê, valuation và kiểm tra biến động tồn kho.</p></article>
+          <article class="expert reveal"><div class="icon">04</div><h3 data-i18n="exp4Title">Data & Automation</h3><p data-i18n="exp4Copy">Excel, Google Sheets, mapping dữ liệu, exception-based control và tự động hóa báo cáo.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-head reveal"><div class="section-kicker" data-i18n="projectsKicker">03 / Selected Projects</div><div><h2 data-i18n="projectsTitle">Case studies từ vấn đề thật.</h2><p data-i18n="projectsCopy">Mỗi case thể hiện cách tôi chuyển một vấn đề vận hành thành logic kiểm tra rõ ràng. Dữ liệu doanh nghiệp, số tiền và mã nội bộ đã được khái quát hóa.</p></div></div>
+        <div class="projects" id="projectGrid"></div>
+      </div>
+    </section>
+
+    <section id="knowledge">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="section-kicker" data-i18n="kbKicker">04 / SAP Knowledge Base</div>
+          <div><h2 data-i18n="kbTitle">Từ thao tác SAP thành kiến thức có cấu trúc.</h2><p data-i18n="kbCopy">Thư viện này tập trung vào câu hỏi “khi nào dùng, kiểm tra gì, sai ở đâu và cần cẩn thận điều gì” — thay vì chỉ ghi nhớ T-code.</p></div>
+        </div>
+        <div class="kb-shell reveal">
+          <div class="kb-top">
+            <div><h3 data-i18n="kbInnerTitle">SAP Practice Notes</h3><p data-i18n="kbInnerCopy">Tìm theo nghiệp vụ, lỗi hoặc transaction. Mở từng note để xem checklist thực hành.</p></div>
+            <label class="search"><input id="kbSearch" type="search" autocomplete="off" data-i18n-placeholder="searchPlaceholder" placeholder="Tìm: WIP, CKMLCP, MB5S..." aria-label="Search knowledge base"><span class="glass">⌕</span></label>
+          </div>
+          <div class="filters" id="kbFilters"></div>
+          <div class="kb-grid" id="kbGrid"></div>
+          <div class="kb-empty" id="kbEmpty" data-i18n="noResult">Không tìm thấy note phù hợp.</div>
+          <p class="privacy-note" data-i18n="kbDisclaimer">Knowledge Base phản ánh kinh nghiệm thực hành đã được khái quát hóa; không thay thế tài liệu cấu hình chính thức hoặc quy trình nội bộ được phê duyệt.</p>
         </div>
       </div>
     </section>
 
     <section>
-      <div class="wrap"><div class="closing"><div><h2>Build controls.<br>Understand the numbers.<br>Improve the process.</h2><p>Portfolio này không nhằm liệt kê mọi thao tác tôi từng làm. Nó ghi lại cách tôi biến những vấn đề thực tế trong kế toán thành kiến thức có cấu trúc và công cụ có thể dùng lại.</p></div><div class="closing-note"><strong>Next update</strong>Thêm ảnh dashboard đã ẩn dữ liệu, sơ đồ luồng SAP và từng bài case study dạng before → analysis → solution → result.</div></div></div>
+      <div class="wrap">
+        <div class="section-head reveal"><div class="section-kicker" data-i18n="growthKicker">05 / Working System</div><div><h2 data-i18n="growthTitle">Một hệ thống học từ chính công việc.</h2><p data-i18n="growthCopy">Mỗi sự cố hoặc quy trình mới đều có thể trở thành tài sản kiến thức nếu được ghi lại đúng cấu trúc.</p></div></div>
+        <div class="timeline">
+          <article class="timeline-card reveal"><div class="label">01 · Observe</div><h3 data-i18n="g1Title">Ghi nhận vấn đề</h3><p data-i18n="g1Copy">Tách triệu chứng khỏi nguyên nhân.</p></article>
+          <article class="timeline-card reveal"><div class="label">02 · Standardize</div><h3 data-i18n="g2Title">Chuẩn hóa logic</h3><p data-i18n="g2Copy">Viết lại thành luồng kiểm tra.</p></article>
+          <article class="timeline-card reveal"><div class="label">03 · Improve</div><h3 data-i18n="g3Title">Tự động hóa phần lặp lại</h3><p data-i18n="g3Copy">Tập trung vào ngoại lệ cần phân tích.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="closing reveal">
+          <div><h2 data-i18n-html="closingTitle">Build controls.<br>Understand the numbers.<br>Improve the process.</h2><p data-i18n="closingCopy">Mục tiêu của portfolio này là cho thấy cách tôi tư duy và giải quyết vấn đề trong môi trường kế toán sản xuất — không chỉ những transaction tôi đã sử dụng.</p><div class="hero-actions"><a class="btn" style="border-color:rgba(255,255,255,.25);color:#fff" href="#knowledge" data-i18n="openKb">Mở Knowledge Base</a></div></div>
+          <div class="closing-side"><b data-i18n="privacyTitle">Confidentiality by design</b><span data-i18n="privacyCopy">Tên khách hàng/NCC, mã nội bộ, số tiền nhạy cảm và dữ liệu SAP thực tế không được công khai nếu chưa được phép.</span></div>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer><div class="wrap footer-row"><span>© 2026 Ngọc Phương. Personal Work & Knowledge Portfolio.</span><span>Confidential business information has been generalized.</span></div></footer>
-  <script>
-    document.querySelectorAll('.toggle').forEach(btn=>btn.addEventListener('click',()=>{const d=btn.nextElementSibling;d.classList.toggle('open');btn.textContent=d.classList.contains('open')?'Thu gọn':'Xem chi tiết';}));
-  </script>
+  <footer><div class="wrap footer-row"><span>© <span id="year"></span> Ngọc Phương · Work & Knowledge Portfolio</span><span data-i18n="footerNote">Business information is generalized for confidentiality.</span></div></footer>
 </body>
 </html>
